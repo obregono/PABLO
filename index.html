@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuncio</title>
+    <title>ANUNCIO</title>
     <style>
         body {
-            font-family: "Arial";
+            font-family: "Arial", sans-serif;
             text-align: center;
             margin: 20px;
         }
@@ -15,20 +15,41 @@
             height: auto;
         }
         p {
-            font-size: 170px; /* Aumenta el tamaño del texto */
-            line-height: 1.8; /* Mejora la legibilidad */
+            font-size: 60px; /* Tamaño base para pantallas grandes */
+            line-height: 1.4;
             margin-top: 20px;
-            font-weight: bold; /* Hace que el texto se vea más destacado */
+            font-weight: bold;
+            text-transform: uppercase; /* Convierte todo el texto en mayúsculas */
+        }
+
+        /* Ajustes para pantallas más pequeñas */
+        @media (max-width: 1024px) {
+            p {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            p {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            p {
+                font-size: 30px;
+                line-height: 1.2;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="pablo_cartel.jpg" alt="Foto de Pablo">
+    <img src="pablo_cartel.jpg" alt="FOTO DE PABLO">
     <p>
-        Anuncio para la ciudadanía a la fecha del 33 de diciembre del año 2077<br>
-        Se reportan dos fugitivos por alteración temporal de la realidad.<br>
-        Son los causantes de crear una disrupción en el espacio tiempo auditiva.<br>
-        La recompensa por entregar a los fugitivos será el total libre albedrío.
+        ANUNCIO PARA LA CIUDADANÍA A LA FECHA DEL 33 DE DICIEMBRE DEL AÑO 2077<br>
+        SE REPORTAN DOS FUGITIVOS POR ALTERACIÓN TEMPORAL DE LA REALIDAD.<br>
+        SON LOS CAUSANTES DE CREAR UNA DISRUPCIÓN EN EL ESPACIO-TIEMPO AUDITIVA.<br>
+        LA RECOMPENSA POR ENTREGAR A LOS FUGITIVOS SERÁ EL TOTAL LIBRE ALBEDRÍO.
     </p>
 </body>
 </html>
