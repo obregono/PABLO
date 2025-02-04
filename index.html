@@ -15,14 +15,13 @@
             height: auto;
         }
         p {
-            font-size: 60px; /* Tamaño base para pantallas grandes */
+            font-size: 60px;
             line-height: 1.4;
             margin-top: 20px;
             font-weight: bold;
-            text-transform: uppercase; /* Convierte todo el texto en mayúsculas */
+            text-transform: uppercase;
         }
 
-        /* Ajustes para pantallas más pequeñas */
         @media (max-width: 1024px) {
             p {
                 font-size: 50px;
@@ -44,6 +43,31 @@
     </style>
 </head>
 <body>
+
     <img src="pablo_cartel_fx2.jpg" alt="PABLO">
+
+    <audio id="audio" loop>
+        <source src="PABLO_ins.wav" type="audio/wav">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("audio");
+
+            // Intentar reproducir automáticamente
+            audio.play().catch(() => {
+                console.log("Autoplay bloqueado. Esperando interacción del usuario.");
+            });
+
+            // También reproducir al hacer clic en cualquier parte de la página
+            document.body.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play();
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
