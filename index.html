@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALERTA - PABLO</title>
     <style>
+        @font-face {
+            font-family: 'Stretch Pro';
+            src: url('StretchPro.woff2') format('woff2'),
+                 url('StretchPro.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         body {
-            font-family: "Arial", sans-serif;
+            font-family: "Stretch Pro", sans-serif;
             text-align: center;
             margin: 20px;
         }
@@ -14,42 +22,59 @@
             max-width: 100%;
             height: auto;
         }
-        p {
+        p, a {
             font-size: 60px;
             line-height: 1.4;
             margin-top: 20px;
             font-weight: bold;
             text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+            letter-spacing: 5px; /* Espaciado entre letras aumentado */
+        }
+        
+        a:hover {
+            color: red;
         }
 
         @media (max-width: 1024px) {
-            p {
+            p, a {
                 font-size: 50px;
+                letter-spacing: 4px;
             }
         }
 
         @media (max-width: 768px) {
-            p {
+            p, a {
                 font-size: 40px;
+                letter-spacing: 3px;
             }
         }
 
         @media (max-width: 480px) {
-            p {
+            p, a {
                 font-size: 30px;
                 line-height: 1.2;
+                letter-spacing: 2px;
             }
         }
     </style>
 </head>
 <body>
-
     <img src="pablo_cartel_fx2.jpg" alt="PABLO">
 
     <audio id="audio" loop>
         <source src="PABLO_ins.wav" type="audio/wav">
         Tu navegador no soporta audio HTML5.
     </audio>
+    
+    <p><a href="https://distrokid.com/hyperfollow/ldelpalmarjaoz/p4blowav" target="_blank">PRESAVE</a></p>
+    <p>
+        <a href="https://www.instagram.com/luisarvizuu_/" target="_blank">LUNA</a><br>
+        <a href="https://www.instagram.com/hernan_lare/" target="_blank">LANDA</a><br>
+        <a href="https://www.instagram.com/prodbyjaoz/" target="_blank">JAOZ</a><br>
+        <a href="https://www.instagram.com/picsbyhuanpa/" target="_blank">HUANPA</a>
+    </p>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -68,6 +93,5 @@
             });
         });
     </script>
-
 </body>
 </html>
